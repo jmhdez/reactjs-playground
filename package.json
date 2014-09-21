@@ -1,0 +1,23 @@
+{
+  "name": "reactjs-playground",
+  "version": "0.0.0",
+  "description": "Playing with react.js",
+  "main": "index.js",
+  "repository": "https://github.com/jmhdez/reactjs-playground.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan M. Hernández",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "^0.9.0",
+    "react-tools": "^0.11.1"
+  },
+  "dependencies": {
+    "browserify": "^5.11.1",
+    "react": "^0.11.1"
+  }
+}
