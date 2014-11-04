@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 				options: {
 					standalone: "app"
 				},
-				src: './lib/index2.js',
+				src: './lib/index.js',
 				dest: './dist/app.js'
 			}
 		},
