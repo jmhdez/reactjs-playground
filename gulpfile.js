@@ -5,30 +5,19 @@ var gulp = require('gulp'),
 	browserify = require('browserify'),
 	reactify = require('reactify');
 
-
-var cfg = {
-
-	src: ['gulpfile.js', './lib/**/*.js'],
-	srcmain: './lib/index.js',
-
-	outdir: './dist/',
-	outfile: 'app.js'
-};
-
-
 gulp.task('browserify', function() {
 
-	var bundle = browserify({entries: cfg.srcmain })
+	var bundle = browserify({entries: './lib/index.js' })
 			.transform(reactify)
 			.bundle();
 
 	return bundle
-		.pipe(source(cfg.outfile))
-		.pipe(gulp.dest(cfg.outdir));
+		.pipe(source('app.js'))
+		.pipe(gulp.dest('./dist/)'));
 });
 
 gulp.task('watch', ['browserify'], function() {
-	gulp.watch(cfg.src, ['browserify'])
+	gulp.watch('./lib/**/*.js', ['browserify'])
 });
 
 gulp.task('default', ['browserify']);
